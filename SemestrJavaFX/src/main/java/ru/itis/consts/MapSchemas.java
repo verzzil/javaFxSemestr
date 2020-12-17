@@ -1,7 +1,7 @@
 package ru.itis.consts;
 
 public final class MapSchemas {
-    public static final String BAD_MAP =   "           p           " +
+    public static final String BAD_MAP =   "           o           " +
                                            " b b b b b b b b b b b " +
                                            " b b b b b b b b b b b " +
                                            " b b b b b b b b b b b " +
@@ -15,9 +15,9 @@ public final class MapSchemas {
                                            "bb b bbbbb bbbbb b bbb " +
                                            "b bbb bbb bbbbbb  bbbb " +
                                            " bbbbb b bbbbbbb bbbbb " +
-                                           "           y           ";
+                                           "           m           ";
 
-    public static final String FIRST_MAP =    "           p           " +
+    public static final String FIRST_MAP =    "           o           " +
                                               "  bb  bb bb bb bb  bb  " +
                                               "  bb  bb bb bb bb  bb  " +
                                               "  bb  bb bbcbb bb  bb  " +
@@ -31,9 +31,9 @@ public final class MapSchemas {
                                               "  bb  bb bb bb bb  bb  " +
                                               "  bb  bb bb bb bb  bb  " +
                                               "  bb  bb bb bb bb  bb  " +
-                                              "           y           ";
+                                              "           m           ";
 
-    public static final String SECOND_MAP =   "           p           " +
+    public static final String SECOND_MAP =   "           o           " +
                                               "ggbbb b b cc bb  bb bb " +
                                               "ggggggg bb  bb   bb bb " +
                                               "ggwwwwwwwwwwwwwwww  www" +
@@ -47,5 +47,5 @@ public final class MapSchemas {
                                               "ggggggggggggggggggggggg" +
                                               "   bb  bb  bb bb bb bb " +
                                               "  bb  bb c  c c b bb   " +
-                                              "           y           ";
+                                              "           m           ";
 }

@@ -26,16 +26,26 @@ public class ReceiveMessageTask extends Task<Void> {
             try {
                 String messageFromServer = fromServer.readLine();
                 if (messageFromServer != null) {
-                    System.out.println(messageFromServer);
-                    if(!controller.curFlag) {
+                    if (!controller.curFlag) {
                         controller.curFlag = true;
                         ImageView temp1 = controller.player1, temp2 = controller.player2;
                         controller.player1 = (Integer.parseInt(messageFromServer) == 1) ? temp1 : temp2;
                         controller.player2 = (Integer.parseInt(messageFromServer) == 1) ? temp2 : temp1;
                     }
-                    if(messageFromServer.charAt(0) == 'm') {
-                        String[] coords = messageFromServer.split(" ");
-                        Platform.runLater(() -> controller.movePlayer2(Double.parseDouble(coords[1]), Double.parseDouble(coords[2])));
+                    if (messageFromServer.charAt(0) == 'm') {
+                        String[] data = messageFromServer.split(" ");
+                        Platform.runLater(() ->
+                                controller.movePlayer2(
+                                        Double.parseDouble(data[1]), Double.parseDouble(data[2]), Integer.parseInt(data[3])
+                                )
+                        );
+                    } else if (messageFromServer.charAt(0) == 'b') {
+                        String[] data = messageFromServer.split(" ");
+                        Platform.runLater(() ->
+                                controller.shotPlayer2(
+                                        Double.parseDouble(data[1]), Double.parseDouble(data[2]), Integer.parseInt(data[3])
+                                )
+                        );
                     }
                 }
             } catch (IOException e) {
