@@ -1,4 +1,4 @@
-package ri.itis;
+package ru.itis.sockets;
 
 import javafx.concurrent.Task;
 

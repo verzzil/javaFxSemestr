@@ -1,4 +1,4 @@
-package ri.itis;
+package ru.itis.sockets;
 
 public class MainForServer {
     public static void main(String[] args) {

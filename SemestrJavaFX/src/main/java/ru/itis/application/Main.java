@@ -20,14 +20,14 @@ public class Main extends Application {
 
         Parent root = fxmlLoader.load();
         primaryStage.setScene(new Scene(root));
-        primaryStage.setTitle("11-906");
+        primaryStage.setTitle("Танчики от Альбы :-)");
         primaryStage.setResizable(false);
 
         Scene scene = primaryStage.getScene();
         FirstMapController controller = fxmlLoader.getController();
         scene.setOnKeyPressed(controller.keyEventEventHandler);
-
         primaryStage.show();
+
     }
 
 }

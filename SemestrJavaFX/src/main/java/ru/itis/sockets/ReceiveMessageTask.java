@@ -31,6 +31,7 @@ public class ReceiveMessageTask extends Task<Void> {
                         ImageView temp1 = controller.player1, temp2 = controller.player2;
                         controller.player1 = (Integer.parseInt(messageFromServer) == 1) ? temp1 : temp2;
                         controller.player2 = (Integer.parseInt(messageFromServer) == 1) ? temp2 : temp1;
+                        controller.id = Integer.parseInt(messageFromServer);
                     }
                     if (messageFromServer.charAt(0) == 'm') {
                         String[] data = messageFromServer.split(" ");
@@ -45,6 +46,11 @@ public class ReceiveMessageTask extends Task<Void> {
                                 controller.shotPlayer2(
                                         Double.parseDouble(data[1]), Double.parseDouble(data[2]), Integer.parseInt(data[3])
                                 )
+                        );
+                    } else if (messageFromServer.charAt(0) == 'r') {
+                        String scheme = messageFromServer.substring(2);
+                        Platform.runLater(() ->
+                                controller.renderNewMap(scheme)
                         );
                     }
                 }
