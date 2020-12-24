@@ -191,7 +191,7 @@ public class FirstMapController implements Initializable {
         service.execute(receiveMessageTask);
 
         pane.setBackground(new Background(new BackgroundFill(Color.BLACK, CornerRadii.EMPTY, new Insets(0, 0, 0, 0))));
-        String scheme = MapSchemas.BAD_MAP;
+        String scheme = MapSchemas.FIRST_MAP;
         renderMap(scheme);
 
     }
